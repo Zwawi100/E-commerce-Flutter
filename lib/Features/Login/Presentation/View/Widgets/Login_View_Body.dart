@@ -1,7 +1,10 @@
 import 'package:finalproject/Core/Cutom_Widget/Custom_textField.dart';
 import 'package:finalproject/Core/Cutom_Widget/Primary_Text.dart';
+import 'package:finalproject/Features/Register/Presentation/View/Register_Page.dart';
 import 'package:finalproject/constant.dart';
 import 'package:flutter/material.dart';
+import '../../../../../Core/Cutom_Widget/Custom_ElevatedButton.dart';
+import '../../../../../Core/Cutom_Widget/Navigate_Text_Button.dart';
 
 // ignore: must_be_immutable
 class LoginViewBody extends StatelessWidget {
@@ -35,13 +38,16 @@ class LoginViewBody extends StatelessWidget {
           Spacer(
             flex: 1,
           ),
-          ElevatedButton(onPressed: () {}, child: Text("Login" , style: TextStyle(color: kPrimaryColor),)),
-          Spacer(flex: 1,),
-          Row(mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("If you haven`t account please" ,style: TextStyle(fontSize: 12),),
-              TextButton(onPressed: (){}, child: Text("Register" , style: TextStyle(color: kPrimaryColor),))
-            ],
+          CustomElevatedButton(
+            text: 'Login',
+          ),
+          Spacer(
+            flex: 1,
+          ),
+          NavigateBetweenLoginAndRegisterButton(
+            text: 'I don`t have account yet',
+            buttonText: 'Register',
+            navigatorRouteTo: RegisterPage.routeName,
           ),
           Spacer(
             flex: 20,
@@ -51,3 +57,5 @@ class LoginViewBody extends StatelessWidget {
     );
   }
 }
+
+

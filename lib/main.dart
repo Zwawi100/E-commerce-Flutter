@@ -1,4 +1,5 @@
 import 'package:finalproject/Features/Login/Presentation/View/Login_Screen.dart';
+import 'package:finalproject/Features/Register/Presentation/View/Register_Page.dart';
 import 'package:flutter/material.dart';
 import 'Features/Splash/Presentation/View/Splash_View.dart';
 
@@ -17,6 +18,7 @@ class ZProject extends StatelessWidget {
       routes: {
         SplashScreen.routeName : (context) =>SplashScreen(),
         LoginScreen.routeName : (context) =>LoginScreen(),
+        RegisterPage.routeName : (context) =>RegisterPage()
 
       },
     );
