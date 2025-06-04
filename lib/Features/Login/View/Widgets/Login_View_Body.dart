@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../../../../../Core/Cutom_Widget/Custom_ElevatedButton.dart';
 import '../../../../../Core/Cutom_Widget/Navigate_Text_Button.dart';
 import '../../../Home/View/Home_Screen.dart';
-import '../../../Register/View/Register_Page.dart';
+import '../../../Register/View/register_screen.dart';
 
 // ignore: must_be_immutable
 class LoginViewBody extends StatelessWidget {
@@ -41,7 +41,7 @@ class LoginViewBody extends StatelessWidget {
           ),
           CustomElevatedButton(
             text: 'Login',
-            navigateTo: HomeScreen.routeName,
+            onpressed: () {  },
           ),
           Spacer(
             flex: 1,

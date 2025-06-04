@@ -4,17 +4,15 @@ import '../../constant.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton({
-    super.key, required this.text, required this.navigateTo,
+    super.key, required this.text, required this.onpressed,
   });
   final String text;
-  final String navigateTo;
-
+  final VoidCallback onpressed;
+  
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        onPressed: () {
-          Navigator.pushReplacementNamed(context, navigateTo);
-        },
+        onPressed:onpressed ,
         child: Text(
           text,
           style: TextStyle(color: kPrimaryColor),
