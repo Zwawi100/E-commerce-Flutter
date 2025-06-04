@@ -2,10 +2,11 @@ import 'package:finalproject/Core/Cutom_Widget/Custom_ElevatedButton.dart';
 import 'package:finalproject/Core/Cutom_Widget/Custom_textField.dart';
 import 'package:finalproject/Core/Cutom_Widget/Navigate_Text_Button.dart';
 import 'package:finalproject/Core/Cutom_Widget/Primary_Text.dart';
-import 'package:finalproject/Features/Login/Presentation/View/Login_Screen.dart';
-import 'package:finalproject/Features/Register/Presentation/View/Widgets/Selected_Gender.dart';
 import 'package:finalproject/constant.dart';
 import 'package:flutter/material.dart';
+
+import '../../../Login/View/Login_Screen.dart';
+import 'Selected_Gender.dart';
 
 // ignore: must_be_immutable
 class RegisterPageBody extends StatelessWidget {
@@ -67,7 +68,7 @@ class RegisterPageBody extends StatelessWidget {
             iconcolor: kPrimaryColor,
           ),
           SelectGender(),
-          Center(child: CustomElevatedButton(text: "Register")),
+          Center(child: CustomElevatedButton(text: "Register", navigateTo: LoginScreen.routeName,)),
           NavigateBetweenLoginAndRegisterButton(
             text: "I have already an account",
             buttonText: "Login",

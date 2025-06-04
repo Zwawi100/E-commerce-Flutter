@@ -1,10 +1,11 @@
 import 'package:finalproject/Core/Cutom_Widget/Custom_textField.dart';
 import 'package:finalproject/Core/Cutom_Widget/Primary_Text.dart';
-import 'package:finalproject/Features/Register/Presentation/View/Register_Page.dart';
 import 'package:finalproject/constant.dart';
 import 'package:flutter/material.dart';
 import '../../../../../Core/Cutom_Widget/Custom_ElevatedButton.dart';
 import '../../../../../Core/Cutom_Widget/Navigate_Text_Button.dart';
+import '../../../Home/View/Home_Screen.dart';
+import '../../../Register/View/Register_Page.dart';
 
 // ignore: must_be_immutable
 class LoginViewBody extends StatelessWidget {
@@ -40,6 +41,7 @@ class LoginViewBody extends StatelessWidget {
           ),
           CustomElevatedButton(
             text: 'Login',
+            navigateTo: HomeScreen.routeName,
           ),
           Spacer(
             flex: 1,
@@ -57,5 +59,3 @@ class LoginViewBody extends StatelessWidget {
     );
   }
 }
-
-

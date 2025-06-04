@@ -1,7 +1,7 @@
-import 'package:finalproject/Features/Login/Presentation/View/Login_Screen.dart';
 import 'package:finalproject/constant.dart';
 import 'package:flutter/material.dart';
 
+import '../../../Login/View/Login_Screen.dart';
 import 'Sliding_Text.dart';
 
 class SplashViewBody extends StatefulWidget {

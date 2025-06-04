@@ -1,5 +1,6 @@
-import 'package:finalproject/Features/Splash/Presentation/View/Widgets/Splash_View_Body.dart';
+
 import 'package:flutter/material.dart';
+import 'Widgets/Splash_View_Body.dart';
 
 class SplashScreen extends StatelessWidget {
   static const routeName = "SplashPage";

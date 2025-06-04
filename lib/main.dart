@@ -1,7 +1,9 @@
-import 'package:finalproject/Features/Login/Presentation/View/Login_Screen.dart';
-import 'package:finalproject/Features/Register/Presentation/View/Register_Page.dart';
 import 'package:flutter/material.dart';
-import 'Features/Splash/Presentation/View/Splash_View.dart';
+import 'Features/Home/View/Home_Screen.dart';
+import 'Features/Login/View/Login_Screen.dart';
+import 'Features/Register/View/Register_Page.dart';
+import 'Features/Splash/View/Splash_View.dart';
+
 
 void main() {
   runApp(ZProject());
@@ -16,12 +18,11 @@ class ZProject extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: SplashScreen.routeName,
       routes: {
-        SplashScreen.routeName : (context) =>SplashScreen(),
-        LoginScreen.routeName : (context) =>LoginScreen(),
-        RegisterPage.routeName : (context) =>RegisterPage()
-
+        SplashScreen.routeName: (context) => SplashScreen(),
+        LoginScreen.routeName: (context) => LoginScreen(),
+        RegisterPage.routeName: (context) => RegisterPage(),
+        HomeScreen.routeName: (context) => HomeScreen()
       },
     );
   }
 }
-
