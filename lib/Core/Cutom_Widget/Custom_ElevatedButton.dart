@@ -11,12 +11,15 @@ class CustomElevatedButton extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-        onPressed:onpressed ,
-        child: Text(
-          text,
-          style: TextStyle(color: kPrimaryColor),
-        )
-        );
+    return Padding(
+      padding: const EdgeInsets.only(top: 10.0),
+      child: ElevatedButton(
+          onPressed:onpressed ,
+          child: Text(
+            text,
+            style: TextStyle(color: kPrimaryColor),
+          )
+          ),
+    );
   }
 }

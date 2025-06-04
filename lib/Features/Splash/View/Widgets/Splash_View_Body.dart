@@ -1,7 +1,7 @@
 import 'package:finalproject/constant.dart';
 import 'package:flutter/material.dart';
 
-import '../../../Login/View/Login_Screen.dart';
+import '../../../Login/View/login_screen.dart';
 import 'Sliding_Text.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -67,7 +67,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void navigatetoLogin() {
     Future.delayed(Duration(seconds: 3), () {
-      Navigator.pushNamed(context, LoginScreen.routeName);
+      Navigator.pushReplacementNamed(context, LoginScreen.routeName);
     });
   }
 }

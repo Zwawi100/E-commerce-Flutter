@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:finalproject/Features/Login/View/Login_Screen.dart';
+import 'package:finalproject/Features/Login/View/login_screen.dart';
 import 'package:finalproject/Features/Register/Model/register_response_model.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -57,15 +57,15 @@ class RegisterViewModel extends ChangeNotifier {
     isLoading = false;
     notifyListeners();
   }
-  @override
-  void dispose() {
-    firstName.dispose();
-    lastName.dispose();
-    email.dispose();
-    phone.dispose();
-    address.dispose();
-    password.dispose();
-    confirmPassword.dispose();
-    super.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   firstName.dispose();
+  //   lastName.dispose();
+  //   email.dispose();
+  //   phone.dispose();
+  //   address.dispose();
+  //   password.dispose();
+  //   confirmPassword.dispose();
+  //   super.dispose();
+  // }
 }
