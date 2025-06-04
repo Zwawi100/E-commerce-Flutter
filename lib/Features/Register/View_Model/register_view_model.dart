@@ -42,9 +42,9 @@ class RegisterViewModel extends ChangeNotifier {
       final registerResponse = RegisterResponseModel.fromJson(decoded);
 
       if (registerResponse.state) {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-            content: Text(
-                "Successful register ${firstName.text}")));
+        ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text("Successful register ${firstName.text}")));
+
         Navigator.pushReplacementNamed(context, LoginScreen.routeName);
       } else {
         ScaffoldMessenger.of(context)
@@ -56,5 +56,16 @@ class RegisterViewModel extends ChangeNotifier {
     }
     isLoading = false;
     notifyListeners();
+  }
+  @override
+  void dispose() {
+    firstName.dispose();
+    lastName.dispose();
+    email.dispose();
+    phone.dispose();
+    address.dispose();
+    password.dispose();
+    confirmPassword.dispose();
+    super.dispose();
   }
 }

@@ -60,7 +60,7 @@ class RegisterPageBody extends StatelessWidget {
       child: ListView(
         children: [
           SizedBox(
-            height: 100,
+            height: 50,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
