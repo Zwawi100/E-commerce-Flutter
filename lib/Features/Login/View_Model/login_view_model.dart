@@ -26,20 +26,19 @@ class LoginViewModel extends ChangeNotifier {
             'email': emailController.text,
             'password': passwordController.text
           }));
-      if(response.statusCode == 200){
-      final decoded = jsonDecode(response.body);
-      final loginResponse = LoginResponeModel.fromJson(decoded);
+      if (response.statusCode == 200) {
+        final decoded = jsonDecode(response.body);
+        final loginResponse = LoginResponeModel.fromJson(decoded);
 
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.setString('token', loginResponse.token);
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setString('token', loginResponse.token);
 
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text("Login Seuccessfully")));
-      Navigator.pushReplacementNamed(context, HomeScreen.routeName,
-          arguments: {'token': loginResponse.token});
-      }else{
-        ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: Text("Wrong valid email or password")));
+        print("Saved Login Token: ${loginResponse.token}");
+
+        Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text("Wrong valid email or password")));
       }
     } catch (e) {
       ScaffoldMessenger.of(context)
@@ -48,5 +47,4 @@ class LoginViewModel extends ChangeNotifier {
     isLoading = false;
     notifyListeners();
   }
-  
 }

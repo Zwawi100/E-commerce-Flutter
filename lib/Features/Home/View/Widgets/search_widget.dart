@@ -34,7 +34,7 @@ class SearchWidget extends StatelessWidget {
               IconButton(onPressed: vm.showSearch, icon: Icon(Icons.search)),
               IconButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, ProfilePage.routeName);
+                    // Navigator.pushNamed(context, ProfilePage.routeName);
                   },
                   icon: Icon(Icons.person))
             ],

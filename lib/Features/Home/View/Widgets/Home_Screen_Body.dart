@@ -1,5 +1,6 @@
 import 'package:finalproject/Core/Cutom_Widget/Primary_Text.dart';
 import 'package:finalproject/Features/Home/View/Widgets/show_welcome.dart';
+import 'package:finalproject/Features/Profile/View/profile_screen.dart';
 import 'package:finalproject/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -27,6 +28,7 @@ class HomeScreenBody extends StatelessWidget {
               )),
           IconButton(
               onPressed: () {
+                // Navigator.pushNamed(context,);
                 // vm.loadingProducts(context);
               },
               icon: Icon(
