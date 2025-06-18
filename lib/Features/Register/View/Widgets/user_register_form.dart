@@ -1,3 +1,4 @@
+import 'package:finalproject/Features/Register/View/Widgets/select_gender.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../Core/Cutom_Widget/Custom_textField.dart';
@@ -110,6 +111,7 @@ class UserForm extends StatelessWidget {
               icon: Icons.location_city,
               iconcolor: kPrimaryColor,
             ),
+            SelectGender(selectedGender: vm.selctedGender)
           ],
         ));
   }

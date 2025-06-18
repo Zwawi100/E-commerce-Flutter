@@ -2,7 +2,7 @@ import 'package:finalproject/Features/Register/View_Model/register_view_model.da
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'Widgets/Register_Page_Body.dart';
+import 'Widgets/register_page_body.dart';
 
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});

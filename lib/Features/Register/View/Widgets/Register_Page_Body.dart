@@ -5,7 +5,6 @@ import 'package:finalproject/Features/Register/View_Model/register_view_model.da
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../Login/View/login_screen.dart';
-import 'Selected_Gender.dart';
 import 'user_register_form.dart';
 
 // ignore: must_be_immutable
@@ -30,7 +29,6 @@ class RegisterPageBody extends StatelessWidget {
             height: 30,
           ),
           UserForm(vm: vm),
-          SelectGender(),
           vm.isLoading
               ? Center(
                   child: CircularProgressIndicator(),

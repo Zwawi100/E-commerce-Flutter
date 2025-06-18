@@ -14,6 +14,7 @@ class RegisterViewModel extends ChangeNotifier {
   final address = TextEditingController();
   final password = TextEditingController();
   final confirmPassword = TextEditingController();
+  String? selctedGender;
 
   bool isLoading = false;
   String? error;

@@ -9,14 +9,16 @@ class ShowWelcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Spacer(
-          flex: 10,
+        Padding(
+          padding: const EdgeInsets.only(right: 16, bottom: 16),
+          child: Text(
+            "Hi Omar",
+            style: TextStyle(
+                color: kSecondaryTextColor, fontWeight: FontWeight.bold),
+          ),
         ),
-        Text("Hi Omar" , style: TextStyle(color: kSecondaryTextColor ,fontWeight: FontWeight.bold),),
-        Spacer(
-          flex: 1,
-        )
       ],
     );
   }

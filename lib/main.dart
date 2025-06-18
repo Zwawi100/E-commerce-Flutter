@@ -18,8 +18,9 @@ void main() {
       ChangeNotifierProvider(create: (_)=>RegisterViewModel()),
       ChangeNotifierProvider(create: (_)=>LoginViewModel()),
       ChangeNotifierProvider(create: (_)=>SearchViewModel()),
-      ChangeNotifierProvider(create: (_)=>ProductViewModel()),
+      ChangeNotifierProvider(create: (_)=> ProductViewModel()..loadingProducts()),
       ChangeNotifierProvider(create: (_) => ProfileViewModel()),
+
     ],
   child: ZProject(),));
 }

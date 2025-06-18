@@ -15,7 +15,7 @@ class KPrimartText extends StatelessWidget {
             LinearGradient(colors: [kPrimaryColor, kSecondaryColor])
                 .createShader(bounds),
         child: Text(
-          "Z Project",
+          "Z Store",
           style: TextStyle(
               fontSize: fontSize,
               color: kPrimaryTextColor,

@@ -1,33 +1,34 @@
-class Product {
+class ProductsModel {
   final int id;
   final String name;
   final String category;
   final String description;
-  final double price;
+  final int price;
   final int discount;
   final String image;
 
-  Product({
-    required this.id,
-    required this.name,
-    required this.category,
-    required this.description,
-    required this.price,
-    required this.discount,
-    required this.image,
-  });
+  ProductsModel(
+      {required this.id,
+      required this.name,
+      required this.category,
+      required this.description,
+      required this.price,
+      required this.discount,
+      required this.image});
 
-  factory Product.fromJson(Map<String, dynamic> json) {
-    return Product(
-      id: json['id'],
-      name: json['name'],
-      category: json['category'],
-      description: json['description'],
-      price: json['price'].toDouble(),
-      discount: json['discount'],
-      image: json['image'],
-    );
+  factory ProductsModel.fromJson(Map<dynamic, dynamic> json) {
+    return ProductsModel(
+        id: json["id"],
+        name: json["name"],
+        category: json["category"],
+        description: json["description"],
+        price: json["price"],
+        discount: json["discount"],
+        image: json["image"]);
   }
 
-  double get discountedPrice => price * (1 - discount / 100);
+  @override
+  String toString() {
+    return 'Product(id: $id, name: $name, category: $category, price: $price, discount: $discount)';
+  }
 }
