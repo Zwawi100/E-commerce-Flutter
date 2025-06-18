@@ -1,5 +1,6 @@
 import 'package:finalproject/Features/Home/View_Model/product_view_model.dart';
 import 'package:finalproject/Features/Login/View_Model/login_view_model.dart';
+import 'package:finalproject/Features/Product%20Page/View/product_page.dart';
 import 'package:finalproject/Features/Profile/View/profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -38,7 +39,8 @@ class ZProject extends StatelessWidget {
         LoginScreen.routeName: (context) => LoginScreen(),
         RegisterPage.routeName: (context) => RegisterPage(),
         HomeScreen.routeName: (context) => HomeScreen(),
-        ProfilePage.routeName:(context) =>ProfilePage()
+        ProfilePage.routeName:(context) =>ProfilePage(),
+        ProductPage.routeName :(context) =>ProductPage()
       },
     );
   }

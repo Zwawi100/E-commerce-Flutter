@@ -1,7 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:finalproject/Features/Home/Model/products_model.dart';
+import 'package:finalproject/Features/Product%20Page/View/product_page.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CustomStack extends StatelessWidget {
   CustomStack({super.key, required this.product});
 
@@ -12,6 +14,7 @@ class CustomStack extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         // Navigator.pushNamed(context, ProductPage.id,arguments: product);
+        Navigator.pushNamed(context, ProductPage.routeName, arguments: product);
       },
       child: Stack(
           clipBehavior: Clip.none,
@@ -34,7 +37,7 @@ class CustomStack extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(r"$" + "${product.price.toString()}"),
+                          Text(r"$" "${product.price.toString()}"),
                           Icon(
                             Icons.favorite,
                             color: Colors.red,
@@ -47,13 +50,18 @@ class CustomStack extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: 10,
+                top: 10,
                 left: 65,
                 child: CachedNetworkImage(
                   imageUrl: product.image,
                   height: 115,
                   width: 100,
-                  placeholder: (context, url) => CircularProgressIndicator(),
+                  placeholder: (context, url) => SizedBox(
+                      width: 5,
+                      height: 5,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 1,
+                      )),
                   errorWidget: (context, url, error) =>
                       Icon(Icons.image_not_supported),
                 ))
